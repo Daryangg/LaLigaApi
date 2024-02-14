@@ -1,0 +1,6 @@
+@LaligaInformationApi_HostAddress = http://localhost:5173
+
+GET {{LaligaInformationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
