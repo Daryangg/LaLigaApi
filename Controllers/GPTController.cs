@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenAI_API;
 using OpenAI_API.Completions;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LaligaInformationApi.Controllers
 {
@@ -20,6 +21,7 @@ namespace LaligaInformationApi.Controllers
             _openAi = new OpenAIAPI(apiKey);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("/askChatGPT")]
         public async Task<IActionResult> UseChatGPT(string query)
@@ -52,7 +54,7 @@ namespace LaligaInformationApi.Controllers
     }
     public class OpenAIOptions
     {
-        public string ApiKey = "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";
+        public string ApiKey = "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";
     }
 }
 

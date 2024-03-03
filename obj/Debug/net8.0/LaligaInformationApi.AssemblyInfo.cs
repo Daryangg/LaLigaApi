@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaligaInformationApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b5c6ac389eaae1e255e9cdb91607a125e40235e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+412281280130f94d7fa5ff76e5656c2912ddb52a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LaligaInformationApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LaligaInformationApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using LaligaInformationApi.Models;
 using LaLigaInformationApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LaLigaInformationApi.Controllers
@@ -53,6 +54,7 @@ namespace LaLigaInformationApi.Controllers
         /// </summary>
         /// <param name="team">The team to add.</param>
         /// <returns>The newly added team.</returns>
+        [Authorize]
         [HttpPost("AddTeam", Name = "AddTeam")]
         public async Task<IActionResult> AddTeam(Team team)
         {
@@ -65,6 +67,7 @@ namespace LaLigaInformationApi.Controllers
         /// </summary>
         /// <param name="teams">The teams to add.</param>
         /// <returns>The newly added teams.</returns>
+        [Authorize]
         [HttpPost("AddAllTeams", Name = "AddAllTeams")]
         public async Task<IActionResult> AddAllTeams(IEnumerable<Team> teams)
         {
@@ -77,6 +80,7 @@ namespace LaLigaInformationApi.Controllers
         /// </summary>
         /// <param name="key">The property to order by.</param>
         /// <returns>A list of teams ordered by the specified property.</returns>
+        [Authorize]
         [HttpGet("OrderBy/{key}")]
         public async Task<IActionResult> ListTeamsOrderBy(string key)
         {
@@ -89,9 +93,6 @@ namespace LaLigaInformationApi.Controllers
             {
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
-        }
-       
-
-
+        }    
     }
 }
